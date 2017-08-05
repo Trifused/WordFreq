@@ -7,10 +7,12 @@
 # Run this with PowerShell in the folder containing your text, from PowerShell with:
 # ./word-freq
 # It looks for combined.txt. To get this from a set of markdown files,
-# I use Cygwin (because native Windows CLIs have enciding issues) and run:
+# I use Cygwin (because native Windows CLIs have encoding issues) and run:
 # cat *.md > combined.txt
 #
 # The very last number in the script sets the length of the word list you'll get.
+# It finds words longer than 4 letters. To increase this limit, change the 4 
+# in the second-last line.
 #
 Clear-Host
 $FileName = "combined.txt"
