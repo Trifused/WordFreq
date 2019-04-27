@@ -91,7 +91,7 @@ $FileContents | foreach {
     } 
 }
 
-Write-Progress -Activity "Indexing words..." -Completed
+Write-Progress -Activity "Indexing Lines..." -Completed
 # Filter Word List to remove any single values and length greter than 2, then sort by Word name
 $WordCountList=$($Dictionary.GetEnumerator()| ? {($_.Value -gt 1) -AND ($_.Name.Length -gt 2)} | Sort Name )
 $DictWords = $WordCountList.Count
